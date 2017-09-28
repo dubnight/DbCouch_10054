@@ -32,10 +32,11 @@ return Users;
 };
 
 
-
-
+function timeout(arg) {
 var statement = "INSERT INTO `" + config.couchbase.bucket + "` (KEY, VALUE) VALUES ( \"admin\", { \"username\": \"admin\","+
                          "\"passwd\" : \"admin\", \"role\":\"ROLE_ADMIN\"  } ) ";
 var query = N1qlQuery.fromString(statement).consistency(N1qlQuery.Consistency.REQUEST_PLUS);
    bucket.query(query, function(error, nodlog) { 
    }); 
+}
+setTimeout(timeout, 4000, 'time');
