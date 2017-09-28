@@ -1,0 +1,8 @@
+version: '2'
+services:
+  node:
+    container_name: DbCouch-10054-web
+    build: desktop
+    image: dbcouch-10054/web
+    ports:
+      - "9090:8080"

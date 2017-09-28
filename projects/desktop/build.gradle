@@ -1,0 +1,10 @@
+
+task zipFolder(type: Zip) {
+    from projectDir
+    baseName 'app'
+    destinationDir projectDir
+}
+
+task build(dependsOn: zipFolder) << {
+  'Node app zipped!'
+}

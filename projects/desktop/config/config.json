@@ -1,0 +1,1 @@
+{"couchbase":{"bucket":"dbcouch","server":"couchbase://34.205.61.224/","password":"211218","dialect":"couchbase","username":"Administrator"},"jwt":{"jwtSecret":"MyS3cr3tK3Y","jwtSession":{"session":false}}}

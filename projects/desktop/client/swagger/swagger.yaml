@@ -1,0 +1,84 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: DbCouch
+host: 52.175.215.67:9090
+basePath: /DbCouch_10054
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /DbCouch_Default_Activity/DbCouch:
+    put:
+      description: Update DbCouch
+      parameters:
+        - name: dbcouch
+          in: body
+          description: json object
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/DbCouch'
+      responses:
+        "200":
+          description: Success
+    get:
+      description: Get all DbCouch
+      responses:
+        "200":
+          description: Success
+    post:
+      description: Create DbCouch
+      parameters:
+        - name: dbcouch
+          in: body
+          description: json object
+          required: true
+          type: string
+          schema:
+            $ref: '#/definitions/DbCouch'
+      responses:
+        "201":
+          description: Success
+  /DbCouch_Default_Activity/DbCouch/{DbCouchId}:
+    delete:
+      description: Delete DbCouch
+      parameters:
+        - name: DbCouchId
+          in: path
+          description: id
+          required: true
+          type: integer
+
+      responses:
+        "204":
+          description: Success
+    get:
+      description: Get DbCouch by id
+      parameters:
+        - name: DbCouchId
+          in: path
+          description: id
+          required: true
+          type: integer
+
+      responses:
+        "200":
+          description: Success
+
+definitions:
+  DbCouch:
+    required:
+      - address
+      - age
+
+    properties:
+      id:
+        type: integer
+      address:
+        type: string
+      age:
+        type: 
